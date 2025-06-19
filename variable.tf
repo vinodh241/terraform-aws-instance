@@ -12,7 +12,7 @@ variable "instance_type" {
 
     validation {
     condition     = contains(["t3.micro", "t3.small","t3.medium"], var.instance_type)
-    error_message = "Invalid runtime provided. Must be either nodejs20.x or nodejs22.x"
+    error_message = "Valid values for instance_types are: t3.micro, t3.small, t3.medium"
   }
   
 }
